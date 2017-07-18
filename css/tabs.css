@@ -1,0 +1,76 @@
+.tab-input {
+	height: 0px;
+	visibility: hidden;
+}
+
+.tab-label {
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 16px 1.5em 17px 1.5em;
+	text-align: center;
+	border: 1px solid;
+	border-color: rgba(255, 255, 255, 0.5);
+	z-index: 1000;
+}
+
+.tab-input:hover + .tab-label {
+	background: rgba(0, 0, 0, 0.25);
+	color: white;
+}
+
+.tab-input:checked + .tab-label {
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	position: relative;
+	z-index: 6;
+}
+
+.tab-container-frame {
+	overflow: auto; 
+	
+	
+	/* Firefox */
+	height: -moz-calc(100% - 50px);
+	
+	/* WebKit */
+	height: -webkit-calc(100% - 50px);
+	
+	/* Opera */
+	height: -o-calc(100% - 50px);
+	
+	/* Standard */
+	height: calc(100% - 50px);
+
+	position: fixed; 
+	top: 50px; 
+	right: 0; 
+	bottom: 0;
+	z-index: 0;
+}
+
+.tab-container-pane
+{
+	/* Firefox */
+	width: -moz-calc(100% - 250px);
+	
+	/* WebKit */
+	width: -webkit-calc(100% - 250px);
+	
+	/* Opera */
+	width: -o-calc(100% - 250px);
+	
+	/* Standard */
+	width: calc(100% - 250px);
+}
+
+.tab-container-full
+{
+	width: 100%;
+}
+
+.tab-input.visible {
+  visibility: visible !important;
+}

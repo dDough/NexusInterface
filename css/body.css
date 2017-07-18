@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
+/*
+@font-face {
+  font-family: 'RobotoSlab-Light';
+  src: url('fonts/RobotoSlab-Light.ttf')  format('truetype');
+}
+*/
+
+body 
+{ 
+	width: 98vw;
+	color:#000; 
+	/* font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif; */
+	font-family: 'Playfair Display', serif;
+	/* letter-spacing: -1px; */
+	font-family: "RobotoSlab-Light";
+	text-align: center;
+	/** background-image: url('../images/patterns/bg.png'); **/
+}
+
+a {
+    text-decoration: none;
+	color: steelblue;
+}
+
+a:hover
+{
+	color:steelblue;
+	text-decoration: underline;
+}
+
+.content-text
+{
+	width: 95%;
+	text-align: justify;
+	font-size: 14px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.expanded-text
+{
+	text-align: center;
+	font-size: 20px;
+}
+
+.content-body
+{
+	width: 95%;
+	margin: 160px auto;
+	
+	z-index: 1; 
+	position: relative;
+	padding: 20px;
+	text-align: justify;
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+.center-screen {
+	position: absolute; 
+	top:0; 
+	bottom: 0; 
+	left: 0; 
+	right: 0; 
+	margin: auto;
+}
+
+/** Mobile Responsiveness for Smaller Devices such as iPhones Portrait. **/
+@media screen and (min-width:320px) and (max-width: 500px) and (orientation: portrait)
+{
+	body { width: 92vw; }
+	
+	.leading-image{ display: none; }
+	
+	.content-body { width: 95%; margin: 100px auto; }
+	.amazon-logo { vertical-align: -10px; height: 20px; }
+}
+
+/** Mobile Responsiveness for Smaller Devices such as iPhones Landscape **/
+@media screen and (min-width:480px) and (max-width: 1000px) and (orientation: landscape)
+{
+	body { width: 92vw; }
+	
+	.leading-image{ display: none; }
+	
+	.content-body { width: 95%; margin: 70px auto; }
+	.amazon-logo { vertical-align: -10px; height: 20px; }
+}

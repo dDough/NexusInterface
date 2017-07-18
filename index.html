@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Nexus Wallet</title>
+
+
+<!-- The Required Stylesheets for Platform -->
+<link href='css/body.css' rel='stylesheet' type='text/css'>
+<link href='css/button.css' rel='stylesheet' type='text/css'>
+<link href='css/colors.css' rel='stylesheet' type='text/css'>
+<link href='css/fonts' rel='stylesheet' type='text/css'>
+<link href='css/forms.css' rel='stylesheet' type='text/css'>
+<link href='css/header.css' rel='stylesheet' type='text/css'>
+<link href='css/menu.css' rel='stylesheet' type='text/css'>
+<link href='css/prompt.css' rel='stylesheet' type='text/css'>
+<link href='css/shape.css' rel='stylesheet' type='text/css'>
+<link href='css/tabs.css' rel='stylesheet' type='text/css'>
+<link href='css/tooltip.css' rel='stylesheet' type='text/css'>
+<link href='css/transition.css' rel='stylesheet' type='text/css'>
+
+
+<!-- The Required Scripts in the Header. Include all other Dependent Scripts Dynamically by scanning for scripts. -->
+<script type='text/javascript' src='script/actions.js'></script>
+<script type='text/javascript' src='script/ajax.js'></script>
+<script type='text/javascript' src='script/animate.js'></script>
+<script type='text/javascript' src='script/callback.js'></script>
+<script type='text/javascript' src='script/create.js'></script>
+<script type='text/javascript' src='script/interface.js'></script>
+<script type='text/javascript' src='script/load.js'></script>
+<script type='text/javascript' src='script/menu.js'></script>
+<script type='text/javascript' src='script/registry.js'></script>
+<script type='text/javascript' src='script/utilities.js'></script>
+
+<!-- Registry Initialization Function Generated From Database. -->
+<script type="text/javascript">
+	REGISTRY.Initialize = function() {
+		var Scripts = [];
+		var CSS     = [];
+
+		/** Register the Systems and Module Overviews. 
+		TODO: Make more modules for the Module App Store **/
+		REGISTRY.REGISTER.System(1,'Overview');
+		REGISTRY.REGISTER.System(2,'Finance');
+		REGISTRY.REGISTER.System(3,'Reports');
+		REGISTRY.REGISTER.System(4,'Network');
+		REGISTRY.REGISTER.System(5,'Settings');
+		REGISTRY.REGISTER.System(6,'Connect');
+		REGISTRY.REGISTER.System(7,'Store');
+		
+		
+		/* Finance Modules.*/
+		REGISTRY.REGISTER.Module(2, 1, 'modules/transfers/index.html',    'Transfers',    Scripts, CSS);
+		REGISTRY.REGISTER.Module(2, 2, 'modules/contacts/index.html',     'Contacts',     Scripts, CSS);
+		REGISTRY.REGISTER.Module(2, 3, 'modules/trust/index.html',        'Trust',        Scripts, CSS);
+
+		
+		/* Reports Modules. */
+		REGISTRY.REGISTER.Module(3, 4, 'modules/history/index.html',      'History',      Scripts, CSS);
+		
+		/* Add your custom javascript and css here with these two arrays. */
+		CSS     = [];
+        //Scripts = ['modules/market/scripts/graph.js']; THIS IS HOW YOU LOAD IN CUSTOM SCRIPTS, SEPERATE THE FILE NAMES BY A COMMA
+		REGISTRY.REGISTER.Module(3, 5, 'modules/market/index.html',       'Market',       Scripts, CSS);
+		
+		
+		REGISTRY.REGISTER.Module(3, 6, 'modules/supply/index.html',       'Supply',       Scripts, CSS);
+		
+		
+		/* Network Modules. */
+        REGISTRY.REGISTER.Module(4, 7,  'modules/explorer/index.html',    'Explorer',     Scripts, CSS);
+		REGISTRY.REGISTER.Module(4, 8,  'modules/statistics/index.html',  'Statistics',   Scripts, CSS);
+		REGISTRY.REGISTER.Module(4, 9,  'modules/console/index.html',     'Console',      Scripts, CSS);
+		
+		/* Settings Modules. */
+		REGISTRY.REGISTER.Module(5, 10, 'modules/profile/index.html',     'Profile',      Scripts, CSS);
+		REGISTRY.REGISTER.Module(5, 11, 'modules/security/index.html',    'Security',     Scripts, CSS);
+		REGISTRY.REGISTER.Module(5, 12, 'modules/backups/index.html',     'Backups',      Scripts, CSS);
+		
+		//INTERFACE.ALERTS.Initialize(0);
+	};
+</script>
+
+</head>
+
+<body class="dark-grey-background" onload="INTERFACE.Initialize();">
+
+<div class="navigation-menu center-text light-grey-background" id='navigation-menu'>
+
+</div>
+
+<div class="light-grey-background" style="width: 100%; height: 50px; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 500; overflow: visible; z-index: 1111;">
+
+<img src="images/nexus-logo.png" class="tooltip" style="float: left; width: 125px; padding-left: 65px; padding-top: 15px; cursor: pointer;" data-title="Load Overview" onclick="INTERFACE.Default();">
+ 
+<div style='height: 50px; right:80px; padding-right: 5px; overflow: visible; top: 10px; position: fixed; vertical-align: center;' class="white-text-smaller">
+Name
+</div>
+
+
+<div id='refresh-button' class='tooltip' style='width: 35px; height: 100%; right: 45px; overflow: hidden; cursor: pointer; position: fixed; top: 0px;' data-title='Refresh' onclick="INTERFACE.Refresh();">
+<img src="images/refresh.png" style="width: 30px; height: 30px; padding-top: 10px;">
+</div>
+
+<div id='logout-button' class='tooltip' style='width: 35px; height: 100%; right: 5px; overflow: hidden; cursor: pointer; position: fixed; top: 0px;' data-title='Logout' onclick="window.location.href = 'logout.php';">
+<img src="images/logout.png" style="width: 40px; height: 40px; padding-top: 6px;">  
+</div> 
+
+<div id='Loader' class='tab-container-frame fade-transition tab-container-pane dark-grey-background'>
+<img src='images/ajax-document-loader.gif'  style='width: 250px; height: 250px;' class="center-screen">
+</div>
+
+<div id='Dashboard' class='tab-container-frame fade-transition tab-container-pane dark-grey-background'>
+</div>
+
+</div>
+
+</body>
+</html>

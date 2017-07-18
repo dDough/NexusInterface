@@ -1,0 +1,94 @@
+/** Navigation Menu On the Left Hand Side. **/
+.navigation-menu
+{ 
+	width: 250px;
+	
+	/* Firefox */
+	height: -moz-calc(100% - 150px);
+	
+	/* WebKit */
+	height: -webkit-calc(100% - 150px);
+	
+	/* Opera */
+	height: -o-calc(100% - 150px);
+	
+	/* Standard */
+	height: calc(100% - 150px);
+
+	position: absolute; 
+	left: 0; 
+	margin-top: 42px;
+    padding-top: 100px;
+    
+	z-index: 1000;
+	border-color: rgba(255, 255, 255, 0.5);
+}
+
+/** Navigation System Items. **/
+.navigation-system
+{
+	/* Firefox */
+	width: -moz-calc(100% - 2px);
+	
+	/* WebKit */
+	width: -webkit-calc(100% - 2px);
+	
+	/* Opera */
+	width: -o-calc(100% - 2px);
+	
+	/* Standard */
+	width: calc(100% - 2px);
+
+	font-size: 16px; 
+	padding-top: 14px; 
+	padding-bottom: 14px; 
+	color: white; 
+	line-height: 16px; 
+	z-index: 1101; 
+	border: 1px solid; 
+	border-color: rgba(255, 255, 255, 0.5);
+	margin-bottom: -1px;
+}
+
+.navigation-system:hover
+ { 
+	background-color: rgba(0, 0, 0, 0.2); 
+	border: 1px solid; 
+	border-color: rgba(255, 255, 255, 0.5);
+	padding-top: 14px; 
+	padding-bottom: 14px; 
+ }
+ 
+ 
+ /** Navigation Module Items. **/
+.navigation-module
+{
+	/* Firefox */
+	width: -moz-calc(100% - 2px);
+	
+	/* WebKit */
+	width: -webkit-calc(100% - 2px);
+	
+	/* Opera */
+	width: -o-calc(100% - 2px);
+	
+	/* Standard */
+	width: calc(100% - 2px);
+
+	font-size: 16px; 
+	padding-top: 10px; 
+	padding-bottom: 10px; 
+	color: white; 
+	line-height: 16px; 
+	z-index: 1101; 
+	border: 1px solid; 
+	border-color: rgba(255, 255, 255, 0.5);
+	margin-bottom: -1px;
+}
+
+.navigation-module:hover
+ { 
+	background-color: rgba(0, 0, 0, 0.2); 
+	border: 1px solid; 
+	border-color: rgba(255, 255, 255, 0.5);
+ }

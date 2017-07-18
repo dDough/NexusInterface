@@ -1,0 +1,157 @@
+/** Class to Draw the main components to generate the header bar. **/
+.header {
+  width: 100vw;
+  height: 150px;
+  position: fixed;
+  text-align: center;
+  color: black;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: block;
+  border: 1px solid;
+  border-color: rgba(128, 128, 128, 0.5);
+}
+
+/** Content of the Header. Holds main Placement Text to be transitioned to Navigation Bar. **/
+.header-content
+{
+	text-align: center; 
+	font-size: 40px; 
+	font-weight: 1000;
+	position: relative;
+	padding: 20px 0px 20px 0px;
+	margin: -150px auto;
+}
+
+/** Class for new size of Bar once scrolled down far enough. **/
+.header-smaller { height: 70px; }
+
+ 
+ /** Navigation Bar Located in header. **/
+.header-navigation {
+	display: table;
+	padding: 0px 0px 0px 0px;
+	position: relative;
+	width: 50%;
+	font-size: 14px;
+	z-index: 1000;
+	height: 100%;
+	margin: auto;
+}
+
+/** Header Logo **/
+.header-logo {
+	height: 100%;
+	vertical-align: middle;
+	display: table-cell;
+	color: black;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 18px;
+	padding: 0px 50px 0px 50px;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+}
+
+/** Navigation Links. **/
+.header-link {
+	height: 100%;
+	vertical-align: middle;
+	display: table-cell;
+	color: black;
+	cursor: pointer;
+	font-weight: 700;
+	font-size: 18px;
+	padding: 0px 50px 0px 50px;
+	font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+}
+	
+.header-link:hover 
+{
+	background-color: rgba(0, 0, 255, 0.5);
+	color: white;
+}
+
+
+
+.header-input {
+	height: 2.5em;
+	visibility: hidden;
+}
+
+.header-label {
+	background: #f9f9f9;
+	border-radius: .25em .25em 0 0;
+	color: #888;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	height: 2.5em;
+	line-height: 2.5em;
+	padding: 0 1.5em;
+	text-align: center;
+}
+
+.header-input:hover + .header-label {
+	background: lightsteelblue;
+	color: white;
+}
+
+.header-input:checked + .header-label {
+	background: lightsteelblue;
+	color: white;
+	position: relative;
+	z-index: 6;
+}
+
+.main-frame {
+	opacity: 0;
+	position: absolute;
+	z-index: -100;
+	background: #f9f9f9;
+}
+
+
+#header-1:checked ~ #main-frame-1,
+#header-2:checked ~ #main-frame-2,
+#header-3:checked ~ #main-frame-3,
+#header-4:checked ~ #main-frame-4,
+#header-5:checked ~ #main-frame-5,
+#header-6:checked ~ #main-frame-6 {
+    opacity: 1;
+    z-index: 100;
+}
+	
+.header-input.visible {
+  visibility: visible !important;
+}
+	
+/** Mobile Responsiveness for Smaller Devices such as iPhones Portrait. **/
+@media screen and (min-width:320px) and (max-width: 414px) and (orientation: portrait)
+{
+	.header-link {
+		 font-size: 12px;
+	}
+	
+	#logo { display: none; }
+		
+	.header-content { font-size: 20px; margin: -120px auto; width: 90%; }
+		
+	.header { height: 100px; padding: 0 10px 0 10px; }
+	.header-smaller { height: 30px; }
+}
+
+/** Mobile Responsiveness for Smaller Devices such as iPhones Landscape **/
+@media screen and (min-width:480px) and (max-width: 800px) and (orientation: landscape)
+{
+	.header-link {
+		 font-size: 14px;
+	}
+	
+	#logo { display: none; }
+		
+	.header-content { font-size: 20px; margin: -100px auto; width: 90%; }
+		
+	.header { height: 80px; padding: 0 10px 0 10px; }
+	.header-smaller { height: 30px; }
+}

@@ -1,0 +1,63 @@
+.input-text
+{ 
+	background: rgba(255, 255, 255, 0.25);
+	display: inline-block;
+	padding: 0 0 0 10px;
+	font-size:14px; 
+	height: 2.5em;
+	line-height: 2.5em;
+	
+	/* Firefox */
+	width: -moz-calc(100% - 10px);
+	
+	/* WebKit */
+	width: -webkit-calc(100% - 10px);
+	
+	/* Opera */
+	width: -o-calc(100% - 10px);
+	
+	/* Standard */
+	width: calc(100% - 10px);
+	
+	color: #888;
+	
+	-moz-box-shadow: 0 0 1px rgba(128, 128, 128, 0.5);
+    -webkit-box-shadow: 0 0 1px rgba(128, 128, 128, 0.5);
+    box-shadow: 0 0 1px rgba(128, 128, 128, 0.5);
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.input-text:focus{
+    -moz-box-shadow: 0 0 8px rgba(66, 123, 174, 0.9);
+    -webkit-box-shadow: 0 0 8px rgba(66, 123, 174, 0.9);
+    box-shadow: 0 0 8px rgba(66, 123, 174, 0.9);
+    border: 1px solid rgba(66, 123, 174, 0.9);
+}
+
+.input-button {
+	background: rgba(255, 255, 255, 0.25);
+	color: #888;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 14px;
+	height: 2.5em;
+	line-height: 2.5em;
+	padding: 0 1.5em;
+	text-align: center;
+}
+
+.input-button:hover { 
+	background: rgba(66, 123, 174, 0.9);
+    color:white;
+ }
+ 
+ .disabled-button {
+	background: rgba(255, 255, 255, 0.25);
+	color: light-grey;
+	display: inline-block;
+	font-size: 14px;
+	height: 2.5em;
+	line-height: 2.5em;
+	padding: 0 1.5em;
+	text-align: center;
+ }
